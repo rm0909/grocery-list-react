@@ -24,8 +24,14 @@ function Login() {
         email: userEmail,
         password: userPassword,
       })
-      .then((res) => {
-        localStorage.setItem("userID", res.data.id);
+      .then((res) => { 
+        const {id,name} = res.data
+        let dataToStore = {
+          userID: id,
+          userName: name,
+        }
+        localStorage.setItem("getData", JSON.stringify(dataToStore));
+        // localStorage.setItem("userID", res.data.id);
         navigate("/homepage", { replace: true });
       })
       .catch(() => navigate("/error", { replace: true }));
