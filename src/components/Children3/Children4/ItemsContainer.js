@@ -4,7 +4,7 @@ const ItemsContainer = ({ itemName, quantity, id, reRender, edit }) => {
   const [showItemButtons,setShowItemButtons] = useState(false)
   const deleteItem = async () => {
     try {
-      await axios.delete(`http://localhost:8000/item/${id}`);
+      await axios.delete(`https://grocery-list-restapi.herokuapp.com/item/${id}`);
       console.log("item deletado");
     } catch (e) {
       console.log("erro ao deletar item");

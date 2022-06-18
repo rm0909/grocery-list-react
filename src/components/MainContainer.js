@@ -15,7 +15,7 @@ export default function AddForm() {
   useEffect(() => {
     const getItemsByAuthor = async () => {
       const { userID } = JSON.parse(localStorage.getItem("getData"));
-      const res = await axios.get(`http://localhost:8000/author/${userID}`);
+      const res = await axios.get(`https://grocery-list-restapi.herokuapp.com/author/${userID}`);
       const { posts } = res.data;
       setItems(posts);
     };
@@ -33,7 +33,7 @@ export default function AddForm() {
     const storedData = JSON.parse(localStorage.getItem("getData"));
     try {
       // user id to asign this item to the user in the database
-      await axios.post("http://localhost:8000/post/", {
+      await axios.post("https://grocery-list-restapi.herokuapp.com/post/", {
         _id: storedData.userID,
         itemName: itemName,
         quantity: quantity,
@@ -58,7 +58,7 @@ export default function AddForm() {
 
   const editItems = async () => {
     try {
-      await axios.patch(`http://localhost:8000/item/${itemID}`, {
+      await axios.patch(`https://grocery-list-restapi.herokuapp.com/item/${itemID}`, {
         itemName: itemName,
         quantity: quantity,
       });

@@ -22,7 +22,7 @@ function Register() {
   }
   const post = () => {
     axios
-      .post("http://localhost:8000/user/register", {
+      .post("https://grocery-list-restapi.herokuapp.com/user/register", {
         name: userName,
         email: userEmail,
         password: userPassword,
