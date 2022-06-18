@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { useNavigate, Link } from "react-router-dom";
+
 function Register() {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -32,10 +33,9 @@ function Register() {
   };
 
   return (
-    <>
+    <div className="body">
       <div className="container">
         <h1>CRIAR CONTA</h1>
-        <br/>
         <form>
           <label htmlFor="username">Nome </label>
           <input
@@ -73,11 +73,11 @@ function Register() {
         <>
           <p>Já tem uma conta?</p>
           <button>
-            <Link to="/">ir para login</Link>
+            <Link to="/">login</Link>
           </button>
         </>
       </div>
-    </>
+    </div>
   );
 }
-export default Register;
+export default Register ;

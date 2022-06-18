@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Container.css";
 import { useNavigate, Link } from "react-router-dom";
+
 function Login() {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
@@ -36,7 +37,7 @@ function Login() {
       .catch(() => navigate("/error", { replace: true }));
   };
   return (
-    <>
+    <div className="body">
       <div className="container">
         <h1>LOGIN</h1>
         <br/>
@@ -73,7 +74,7 @@ function Login() {
           </button>
         </>
       </div>
-    </>
+    </div>
   );
 }
 export default Login;

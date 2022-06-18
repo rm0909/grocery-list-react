@@ -1,7 +1,7 @@
-.index{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 }
 .container{
     display: flex;
