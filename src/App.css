@@ -28,14 +28,14 @@
   background: var(--linear-gradient);
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.user{
-  color:#3d5243
+.user {
+  color: #3d5243;
 }
 .title {
   text-shadow: 4px 3px 0px #e6e9bed2;
@@ -104,6 +104,10 @@ input {
 .name {
   padding: 2px;
 }
+.logout:hover{
+  color: darkred;
+  cursor: pointer;
+}
 .buttons {
   width: 50%;
   margin: 0.05rem;
@@ -125,4 +129,12 @@ input[type="number"] {
 
 .input {
   width: 80%;
+}
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+  }
+  .user{
+    font-size: 1rem;
+  }
 }

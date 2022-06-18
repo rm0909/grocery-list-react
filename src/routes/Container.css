@@ -9,6 +9,13 @@
     align-items: center;
     justify-content: center;
 }
+.user-container{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .send--button{
     display: flex;
     align-items: center;

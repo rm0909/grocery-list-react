@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import axios from "axios";
 import "../App.css";
 import { useNavigate, Link } from "react-router-dom";
-
+import { Context } from "../components/authContext/authContext";
 function Register() {
+  const { authenticated } = useContext(Context)
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
@@ -21,19 +22,24 @@ function Register() {
         return;
     }
   }
-  const post = () => {
-    axios
+  const post = async() => {
+    try{
+     await axios
       .post("https://grocery-list-restapi.herokuapp.com/user/register", {
         name: userName,
         email: userEmail,
         password: userPassword,
       })
-      .then(() => navigate("/login", { replace: true }))
-      .catch(navigate("/error", { replace: true }));
+      navigate("/", {replace:true})
+    }catch(err){
+      alert("falha ao criar conta",err)
+    }
+      // .then(() => navigate("/", { replace: true }))
+      // .catch(alert("falha ao criar conta"));
   };
 
   return (
-    <div className="body">
+    !authenticated && <div className="body">
       <div className="container">
         <h1>CRIAR CONTA</h1>
         <form>

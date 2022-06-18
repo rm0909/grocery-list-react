@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/Header";
 import MainContainer from "../components/MainContainer";
-const Homepage = () => (
-  <>
+import { Context } from "../components/authContext/authContext";
+const Homepage = () => {
+  const {authenticated} = useContext(Context)
+ return( authenticated && <>
     <Header />
     <MainContainer />
-  </>
-);
+  </>);
+};
 
 export { Homepage };
