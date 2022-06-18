@@ -1,34 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Patrick+Hand&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+:root {
+  --patrick-hand-font: "Patrick Hand", cursive;
+  --gradient-rgb: rgb(237, 236, 174);
+  --linear-gradient: linear-gradient(
+    45deg,
+    rgba(237, 236, 174, 0.8883928571428571) 16%,
+    rgba(186, 209, 112, 0.6446953781512605) 52%,
+    rgba(44, 139, 136, 0.34217436974789917) 88%
+  );
+  --text-color-green: rgba(50, 104, 71, 0.938);
+  --transparent-background: rgba(255, 255, 255, 0.329);
+}
+
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  min-height: 100vh;
-}
-textarea{
-  max-width: 400px;
-  max-height: 100px;
+  font-family: var(--patrick-hand-font);
 }
 .App {
-    display: grid;
-    place-items: center;
+  min-height: 100vh;
+  background: var(--gradient-rgb);
+  background: var(--linear-gradient);
 }
-.container {
-    margin: 10%;
-    padding: 5px;
-    height: 400px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(168, 214, 214);
-    color: rgb(8, 88, 119);
-    border-radius: 10px;
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.input{
-    width: 80%;
+.user{
+  color:#3d5243
+}
+.title {
+  text-shadow: 4px 3px 0px #e6e9bed2;
+  font-size: 2.5rem;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: var(--text-color-green);
+}
+.formContainer {
+  font-size: 1.5rem;
+  margin: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addItem {
+  font-size: 1rem;
+  height: 28px;
+  width: 100px;
+  border-radius: 5rem;
+  background-color: var(--transparent-background);
+}
+.addItem:hover {
+  background-color: var(--text-color-green);
+  color: white;
+  cursor: pointer;
+}
+.wrapper {
+  min-width: 350px;
+  color: var(--text-color-green);
+  margin: 1.5rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.item {
+  background-color: rgba(255, 255, 255, 0.329);
+  border-radius: 5px;
+  padding: 0.12rem;
+  cursor: pointer;
+  border: solid rgb(78, 110, 79) 1px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  z-index: 1;
+  font-size: 1.7rem;
+}
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.459);
+}
+.item-buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+.input-container > button {
+  font-size: 1rem;
+  height: 1.5rem;
+}
+input {
+  height: 1.5rem;
+  font-size: 1rem;
+}
+.name {
+  padding: 2px;
+}
+.buttons {
+  width: 50%;
+  margin: 0.05rem;
+}
+.input-container {
+  margin: 0.3rem;
+  gap: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+input[type="number"] {
+  width: 4.375rem;
+}
+.hidden {
+  display: none;
+}
+
+.input {
+  width: 80%;
 }

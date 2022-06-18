@@ -1,18 +1,11 @@
-
 import React from "react";
-import Header from "../components/Header.js";
-import AddForm from "../components/AddForm.js";
-import ItemsContainer from "../components/ItemsContainer.js";
+import Header from "../components/Header";
+import MainContainer from "../components/MainContainer";
+const Homepage = () => (
+  <>
+    <Header />
+    <MainContainer />
+  </>
+);
 
-
-export default function Homepage() {
-  
-  return (
-    <>
-      <Header />
-      <AddForm />
-      <ItemsContainer />
-    </>
-  );
-}
-
+export { Homepage };

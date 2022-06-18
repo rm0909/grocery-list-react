@@ -35,15 +35,17 @@ function Register() {
     <>
       <div className="container">
         <h1>CRIAR CONTA</h1>
+        <br/>
         <form>
-          <label htmlFor="username">Usuário </label>
+          <label htmlFor="username">Nome </label>
           <input
             value={userName}
             type="text"
             id="username"
             className="input"
             onChange={handleChange}
-          ></input>
+          />
+          <br />
           <label htmlFor="email">Email </label>
           <input
             value={userEmail}
@@ -52,6 +54,7 @@ function Register() {
             className="input"
             onChange={handleChange}
           ></input>
+          <br />
           <label htmlFor="password">Senha </label>
           <input
             value={userPassword}
@@ -60,16 +63,19 @@ function Register() {
             className="input"
             onChange={handleChange}
           ></input>
-          <button type="button" onClick={post}>
-            Enviar
+          <div className="send--button">
+            <button type="button" onClick={post}>
+              Enviar
+            </button>
+          </div>
+        </form>{" "}
+        <br />
+        <>
+          <p>Já tem uma conta?</p>
+          <button>
+            <Link to="/">ir para login</Link>
           </button>
-        </form>
-      </div>
-      <div>
-        <p>Já tem uma conta?</p>
-        <button>
-          <Link to="/">ir para login</Link>
-        </button>
+        </>
       </div>
     </>
   );

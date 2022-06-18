@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../App.css";
+import "./Container.css";
 import { useNavigate, Link } from "react-router-dom";
 function Login() {
   const [userEmail, setUserEmail] = useState("");
@@ -18,20 +18,19 @@ function Login() {
         return;
     }
   }
-  const post = () => {
-    axios
+  const post = async () => {
+    await axios
       .post("http://localhost:8000/user/login", {
         email: userEmail,
         password: userPassword,
       })
-      .then((res) => { 
-        const {id,name} = res.data
+      .then((res) => {
+        const { id, name } = res.data;
         let dataToStore = {
           userID: id,
           userName: name,
-        }
+        };
         localStorage.setItem("getData", JSON.stringify(dataToStore));
-        // localStorage.setItem("userID", res.data.id);
         navigate("/homepage", { replace: true });
       })
       .catch(() => navigate("/error", { replace: true }));
@@ -40,6 +39,7 @@ function Login() {
     <>
       <div className="container">
         <h1>LOGIN</h1>
+        <br/>
         <form>
           <label htmlFor="email">Email </label>
           <input
@@ -49,6 +49,7 @@ function Login() {
             className="input"
             onChange={handleChange}
           ></input>
+          <br />
           <label htmlFor="password">Senha </label>
           <input
             value={userPassword}
@@ -57,15 +58,21 @@ function Login() {
             className="input"
             onChange={handleChange}
           ></input>
-          <button type="button" onClick={post}>
-            Enviar
-          </button>
+          <div className="send--button">
+            {" "}
+            <button type="button" onClick={post}>
+              Enviar
+            </button>
+          </div>
         </form>
+        <br />
+        <>
+          <p>Não tem uma conta?</p>
+          <button>
+            <Link to="/register">registrar</Link>
+          </button>
+        </>
       </div>
-      <p>Não tem uma conta?</p>
-      <button>
-        <Link to="/register">registrar</Link>
-      </button>
     </>
   );
 }

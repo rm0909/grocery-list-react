@@ -4,7 +4,7 @@ import "../App.css"
 export default function Fail(){
     return(
         <>
-        <h1>FALHA AO CRIAR/LOGAR CONTA</h1>
+        <h1 className="fail">FALHA AO CRIAR/LOGAR</h1>
         </>
     )
 }
