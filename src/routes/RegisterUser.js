@@ -43,44 +43,44 @@ function Register() {
       <div className="container">
         <h1>CRIAR CONTA</h1>
         <form>
-          <label htmlFor="username">Nome </label>
-          <input
+          <label htmlFor="username">Nome de Usuário: <input
             value={userName}
             type="text"
             id="username"
             className="input"
             onChange={handleChange}
-          />
-          <br />
-          <label htmlFor="email">Email </label>
-          <input
+            placeholder="max 12 caracteres"
+            max="12"
+          /></label>
+          <label htmlFor="email">Email: <input
             value={userEmail}
             type="email"
             id="email"
             className="input"
             onChange={handleChange}
-          ></input>
-          <br />
-          <label htmlFor="password">Senha </label>
-          <input
+            placeholder="seu email"
+          /></label>
+          <label htmlFor="password">Senha: <input
             value={userPassword}
             type="password"
             id="password"
             className="input"
             onChange={handleChange}
-          ></input>
+            placeholder="minimo 6 caracteres"
+            min="6"
+          /></label>
           <div className="send--button">
             <button type="button" onClick={post}>
               Enviar
             </button>
           </div>
         </form>{" "}
-        <br />
+        <br/>
         <>
           <p>Já tem uma conta?</p>
-          <button>
+          <p>
             <Link to="/">login</Link>
-          </button>
+          </p>
         </>
       </div>
     </div>

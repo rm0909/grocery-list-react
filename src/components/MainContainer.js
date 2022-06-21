@@ -80,7 +80,7 @@ export default function AddForm() {
             ref={inputEl}
             type="text"
             id="itemName"
-            placeholder="nome"
+            placeholder="produto"
             onChange={handleChange}
           ></input>
 

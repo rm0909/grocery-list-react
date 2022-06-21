@@ -49,23 +49,25 @@ function Login() {
           <h1>LOGIN</h1>
           <br />
           <form>
-            <label htmlFor="email">Email </label>
-            <input
+            <label htmlFor="email" >Email: <input
               value={userEmail}
               type="email"
               id="email"
               className="input"
               onChange={handleChange}
-            ></input>
-            <br />
-            <label htmlFor="password">Senha </label>
-            <input
+              placeholder="exemplo: email@email.com"
+              min="6"
+            /></label>
+            <label htmlFor="password">Senha: <input
               value={userPassword}
               type="password"
               id="password"
               className="input"
               onChange={handleChange}
-            ></input>
+              placeholder="sua senha"
+              min="6"
+            /></label>
+            
             <div className="send--button">
               {" "}
               <button type="button" onClick={post}>
@@ -76,9 +78,9 @@ function Login() {
           <br />
           <>
             <p>Não tem uma conta?</p>
-            <button>
+            <p>
               <Link to="/register">registrar</Link>
-            </button>
+            </p>
           </>
         </div>
       </div>
