@@ -14,13 +14,8 @@ export default function AddForm() {
   // useEffect rerendering only when i change items in the list without infinity loop
   useEffect(() => {
     const getItemsByAuthor = async () => {
-      const { userID, userToken } = JSON.parse(localStorage.getItem("getData"));
-      const config = {
-        headers:{
-          "authorization-token": `${userToken}`
-        }
-      }
-      const res = await axios.get(`https://grocery-list-restapi.herokuapp.com/author/${userID}`,config);
+      const { userID} = JSON.parse(localStorage.getItem("getData"));
+      const res = await axios.get(`https://grocery-list-restapi.herokuapp.com/author/${userID}`);
       const { posts } = res.data;
       setItems(posts);
     };

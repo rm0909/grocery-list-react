@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
+import jwt from "jsonwebtoken"
 import "./Container.css";
 import { useNavigate, Link } from "react-router-dom";
 import { Context } from "../components/authContext/authContext";
@@ -28,12 +29,11 @@ function Login() {
         password: userPassword,
       })
       .then((res) => {
-        const { id, name, token } = res.data;
+        const {token} = res.data
+        const { _id, name} = jwt.decode(token);
         let dataToStore = {
-          userID: id,
+          userID: _id,
           userName: name,
-          userToken: token,
-          isAuth: true,
         };
         localStorage.setItem("getData", JSON.stringify(dataToStore));
         handleLogin();

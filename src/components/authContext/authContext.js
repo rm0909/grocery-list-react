@@ -15,7 +15,7 @@ function AuthProvider({ children }) {
         navigate("/",{ replace:true})
         return
     }
-    if (data.isAuth){ 
+    if (data){ 
         setAuthenticated(true)
         navigate("/homepage", {replace:true})
     };
