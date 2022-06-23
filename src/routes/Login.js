@@ -28,10 +28,11 @@ function Login() {
         password: userPassword,
       })
       .then((res) => {
-        const { id, name } = res.data;
+        const { id, name, token } = res.data;
         let dataToStore = {
           userID: id,
           userName: name,
+          userToken: token,
           isAuth: true,
         };
         localStorage.setItem("getData", JSON.stringify(dataToStore));
