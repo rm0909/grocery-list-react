@@ -1,13 +1,13 @@
 {
-  "main.css": "/grocery-list-react/static/css/main.7957b9e6.chunk.css",
-  "main.js": "/grocery-list-react/static/js/main.35c138d3.chunk.js",
-  "main.js.map": "/grocery-list-react/static/js/main.35c138d3.chunk.js.map",
-  "static/js/1.68915521.chunk.js": "/grocery-list-react/static/js/1.68915521.chunk.js",
-  "static/js/1.68915521.chunk.js.map": "/grocery-list-react/static/js/1.68915521.chunk.js.map",
-  "runtime~main.js": "/grocery-list-react/static/js/runtime~main.ba0692d8.js",
-  "runtime~main.js.map": "/grocery-list-react/static/js/runtime~main.ba0692d8.js.map",
-  "static/css/main.7957b9e6.chunk.css.map": "/grocery-list-react/static/css/main.7957b9e6.chunk.css.map",
+  "main.css": "/grocery-list-react/static/css/main.2dbc3bbe.chunk.css",
+  "main.js": "/grocery-list-react/static/js/main.5b4cad54.chunk.js",
+  "main.js.map": "/grocery-list-react/static/js/main.5b4cad54.chunk.js.map",
+  "runtime~main.js": "/grocery-list-react/static/js/runtime~main.7d55846f.js",
+  "runtime~main.js.map": "/grocery-list-react/static/js/runtime~main.7d55846f.js.map",
+  "static/js/2.0b02785b.chunk.js": "/grocery-list-react/static/js/2.0b02785b.chunk.js",
+  "static/js/2.0b02785b.chunk.js.map": "/grocery-list-react/static/js/2.0b02785b.chunk.js.map",
   "index.html": "/grocery-list-react/index.html",
-  "precache-manifest.e5046c4d53b7e056396d769ab59793b7.js": "/grocery-list-react/precache-manifest.e5046c4d53b7e056396d769ab59793b7.js",
-  "service-worker.js": "/grocery-list-react/service-worker.js"
+  "precache-manifest.88d9ec90d8fb2cad9ba9f3aa144d18d8.js": "/grocery-list-react/precache-manifest.88d9ec90d8fb2cad9ba9f3aa144d18d8.js",
+  "service-worker.js": "/grocery-list-react/service-worker.js",
+  "static/css/main.2dbc3bbe.chunk.css.map": "/grocery-list-react/static/css/main.2dbc3bbe.chunk.css.map"
 }
