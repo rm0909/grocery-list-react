@@ -4,13 +4,14 @@ import { Context } from "./authContext/authContext";
 function Header() {
   const { authenticated, handleLogout } = useContext(Context);
   let { userName } = JSON.parse(localStorage.getItem("getData"));
-  let toUpperCase = userName.charAt(0).toUpperCase() + userName.slice(1);
+  let formattedName = userName.charAt(0).toUpperCase() + userName.slice(1)
   return (
     <div className="header">
       <h1 className="title">Lista de Compras</h1>
-      {authenticated && toUpperCase ? (
+      {authenticated && formattedName ? (
         <div className="user-container">
-          <h2 className="user">Bem-vindo {toUpperCase}</h2>
+          <h2 className="user">Bem-vindo {formattedName}</h2>
+      
           <div className="logout"
             onClick={() => {
               localStorage.removeItem("getData");
