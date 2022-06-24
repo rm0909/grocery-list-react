@@ -34,8 +34,6 @@ function Register() {
     }catch(err){
       alert("falha ao criar conta",err)
     }
-      // .then(() => navigate("/", { replace: true }))
-      // .catch(alert("falha ao criar conta"));
   };
 
   return (
@@ -43,7 +41,7 @@ function Register() {
       <div className="container">
         <h1>CRIAR CONTA</h1>
         <form>
-          <label htmlFor="username">Nome de Usuário: <input
+          <label htmlFor="username">Nome: <input
             value={userName}
             type="text"
             id="username"

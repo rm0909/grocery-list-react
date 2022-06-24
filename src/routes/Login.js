@@ -31,9 +31,10 @@ function Login() {
       .then((res) => {
         const {token} = res.data
         const { _id, name} = jwt.decode(token);
+        const [fistName,] = name.split(" ")
         let dataToStore = {
           userID: _id,
-          userName: name,
+          userName: fistName,
         };
         localStorage.setItem("getData", JSON.stringify(dataToStore));
         handleLogin();
