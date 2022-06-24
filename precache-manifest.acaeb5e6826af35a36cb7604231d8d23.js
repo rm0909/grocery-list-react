@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9985d6e25e6ada43d101",
+    "revision": "419a2080129c84fc6593",
     "url": "/grocery-list-react/static/css/main.2dbc3bbe.chunk.css"
   },
   {
-    "revision": "9985d6e25e6ada43d101",
-    "url": "/grocery-list-react/static/js/main.5c22b0cc.chunk.js"
+    "revision": "419a2080129c84fc6593",
+    "url": "/grocery-list-react/static/js/main.35a7267c.chunk.js"
   },
   {
     "revision": "bb455f6da733a56010cf",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/grocery-list-react/static/js/2.bb24163f.chunk.js"
   },
   {
-    "revision": "8436f61c2dba05760e06d1cef95a748c",
+    "revision": "91aee31887f5bdd2fa088e9e3f14c866",
     "url": "/grocery-list-react/index.html"
   }
 ];
