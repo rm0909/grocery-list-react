@@ -1,4 +1,4 @@
-# Grocery List:
+# Grocery List App:
 
 Create a list of things to buy on the market.
 
