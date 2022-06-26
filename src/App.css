@@ -65,7 +65,7 @@
   cursor: pointer;
 }
 .wrapper {
-  min-width: 350px;
+  /* min-width: 350px; */
   color: var(--text-color-green);
   margin: 1.5rem;
   display: grid;
@@ -137,4 +137,13 @@ input[type="number"] {
   .user{
     font-size: 1rem;
   }
+ .wrapper{
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+ }
+ .item{
+  width: 230px;
+  font-size: 1.5rem;
+ }
+ 
+
 }
