@@ -1,5 +1,8 @@
 # Grocery List App:
 
+### Github Pages:
+- https://rm0909.github.io/grocery-list-react/
+
 Create a list of things to buy on the market.
 
 ### Build With:
@@ -31,8 +34,6 @@ Create a list of things to buy on the market.
 - React Context api
 - React Routers
 - React Hooks useState, useEffect, useContext, useNavigate
-### Github Pages:
-- https://rm0909.github.io/grocery-list-react/
 
 ________________________________________________________
 
