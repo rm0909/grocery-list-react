@@ -3,7 +3,7 @@
 ### Github Pages:
 - https://rm0909.github.io/grocery-list-react/
 
-Create a list of things to buy on the market.
+A REST api using Express, MongoDB as database and JWT to authorize login. React Router to create navigation between pages. My biggest difficulty was building a component structure that was able to pass props from parent to child. Another difficulty was understanding how JWT works. I used Context api to create login status
 
 ### Build With:
 - REACT
@@ -39,7 +39,8 @@ ________________________________________________________
 
 
 # Lista de compras
-Crie uma lista de coisas para comprar no mercado.
+
+Uma REST api usando Express, MongoDB como database e JWT para autorizar o login. React Router para criar uma navegação entre páginas. Minha maior dificuldade foi construir uma estrutura de componentes que fosse capaz de passar props de pai pra filho. Outra dificuldade foi entender como funciona o JWT. Usei Context api para criar status de login
 
 ### Feito com:
 - CSS
